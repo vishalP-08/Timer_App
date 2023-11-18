@@ -1,0 +1,134 @@
+body {
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background: #1D1D23;
+        color: white;
+      }
+      
+      .container {
+        text-align: center;
+      }
+      
+      h1 {
+        margin-bottom: 20px;
+      }
+      
+      .input-box {
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      
+      .rounded-box {
+        background-color: #34344A;
+        padding: 20px;
+        border-radius: 15px;
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      .rounded-box label {
+        display: block;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+      
+      .rounded-box input {
+        padding: 10px;
+        margin: 0 10px;
+        width: 60px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        color: #1D1D23;
+      }
+      
+      .rounded-box button {
+        background-color: #FFD700;
+        color: #1D1D23;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      .rounded-box button:hover {
+        background-color: #FFDB58;
+      }
+      
+      .message-box {
+        background: #39393E;
+        padding: 15px;
+        border-radius: 15px;
+        margin: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      #noTimersMessage {
+        color: #fff;
+        font-weight: bold;
+      }
+      
+      .active-timers-section {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      
+      .timer {
+        background-color: #34344A;
+        padding: 10px;
+        width: 400px;
+        border-radius: 15px;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative; /* Needed for absolute positioning of timer-up-text */
+      }
+      
+      .timer .time {
+        font-size: 24px;
+        color: #fff;
+      }
+      
+      .timer .stop-btn {
+        background-color: #ff5c5c;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      .timer .stop-btn:hover {
+        background-color: #ff7878;
+      }
+      
+      .timer-ended {
+        background-color: #FFD700; /* Change to yellow when timer is up */
+        position: relative; /* Needed for absolute positioning of timer-up-text */
+      }
+      
+      .timer-up-text {
+        color: #1D1D23;
+        font-size: 18px;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .timer-ended .time {
+        visibility: hidden; /* Hide hh mm ss when timer is up */
+      }
