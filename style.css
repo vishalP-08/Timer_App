@@ -78,8 +78,8 @@ body {
       
       .active-timers-section {
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        flex-direction: column; /* Display timers one below another */
+        align-items: center;
       }
       
       .timer {

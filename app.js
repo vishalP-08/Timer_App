@@ -75,15 +75,6 @@ function handleTimerEnd(timerObj) {
   // Play audio alert
   const audio = new Audio('wrong-answer-129254.mp3'); // Replace with your audio file path
   audio.play();
-
-  // Display or hide the "You have no timers currently!" message
-  updateNoTimersMessage();
-
-  // Remove the timer after a delay (optional)
-  setTimeout(() => {
-    timerElement.remove();
-    updateNoTimersMessage();
-  }, 5000); // Change 5000 to the desired delay in milliseconds
 }
 
 function stopTimer(index) {
@@ -101,9 +92,9 @@ function stopTimer(index) {
   timers.splice(index, 1);
   timerElement.remove();
 
+  // Display or hide the "You have no timers currently!" message
+  updateNoTimersMessage();
 }
-
-
 
 function formatTime(seconds) {
   const hours = Math.floor(seconds / 3600);
@@ -112,3 +103,5 @@ function formatTime(seconds) {
 
   return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
 }
+
+
